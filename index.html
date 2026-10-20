@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, follow">
+<title>Primo incontro, Luca Centolani</title>
+<meta name="description" content="Consulenza naturopatica e Shiatsu a Solarolo. Primo incontro su prenotazione.">
+<style>
+@font-face{font-family:"Lora";font-style:normal;font-weight:400;font-display:swap;src:url("lora-latin-400-normal.woff2") format("woff2");}
+@font-face{font-family:"Lora";font-style:normal;font-weight:500;font-display:swap;src:url("lora-latin-500-normal.woff2") format("woff2");}
+@font-face{font-family:"Lora";font-style:italic;font-weight:400;font-display:swap;src:url("lora-latin-400-italic.woff2") format("woff2");}
+@font-face{font-family:"Lora";font-style:italic;font-weight:500;font-display:swap;src:url("lora-latin-500-italic.woff2") format("woff2");}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:400;font-display:swap;src:url("montserrat-latin-400-normal.woff2") format("woff2");}
+@font-face{font-family:"Montserrat";font-style:normal;font-weight:500;font-display:swap;src:url("montserrat-latin-500-normal.woff2") format("woff2");}
+body{margin:0}
+
+/* Layout: apertura stagionale (inverno, Acqua), striscia di fatti, la stagione nella MTC, il primo incontro in tre momenti con le azioni, dove, chiusura. Barra WhatsApp fissa su telefono. */
+:root {
+  --text: #332E27;
+  --text-2: #6B6555;
+  --text-3: #827C68;
+  --line: #C9C3B4;
+  --sand: #E3DBCB;
+  --cream: #EAE3D6;
+  --base: #F3EFE7;
+  --olive: #566040;
+  --olive-text: #FBF9F4;
+  --sage: #838F63;
+  --font-display: "Lora", Georgia, "Times New Roman", serif;
+  --font-body: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--base); color: var(--text);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.7;
+  padding-block: 0 88px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 1040px; margin: 0 auto; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; text-wrap: balance; margin: 0; line-height: 1.15; }
+h1 { font-size: clamp(2.5rem, 7vw, 4rem); letter-spacing: -.01em; }
+h1 em { font-style: italic; font-weight: 400; color: var(--text-2); }
+h2 { font-size: clamp(1.7rem, 4vw, 2.3rem); }
+h3 { font-size: 1.25rem; line-height: 1.3; }
+p { margin: 0; max-width: 60ch; }
+.eyebrow { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--text-3); font-weight: 500; }
+
+.hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; padding-block: 48px 64px; }
+.hero-text { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.lead { color: var(--text-2); font-size: 1.15rem; line-height: 1.65; }
+.photo {
+  display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover;
+  background: var(--sand); border: 1px solid var(--line);
+}
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hint { font-size: .85rem; color: var(--text-3); }
+.btn {
+  font-family: var(--font-body); font-size: 1rem; font-weight: 500; letter-spacing: .02em;
+  padding: 16px 28px; border-radius: 2px; text-decoration: none; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; min-height: 52px;
+}
+.btn-main { background: var(--olive); color: var(--olive-text); border: 1px solid var(--olive); }
+.btn-main:hover { filter: brightness(1.12); }
+.btn-alt { background: transparent; color: var(--text); border: 1px solid var(--text-3); }
+.btn-alt:hover { background: var(--sand); }
+.btn:focus-visible { outline: 2px solid var(--sage); outline-offset: 2px; }
+
+.facts { border-block: 1px solid var(--line); display: grid; grid-template-columns: repeat(4, 1fr); }
+.facts div { padding: 20px 16px 20px 0; display: flex; flex-direction: column; gap: 2px; }
+.facts div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+.facts b { font-family: var(--font-display); font-weight: 500; font-size: 1.35rem; line-height: 1.2; }
+.facts span { font-size: .8rem; color: var(--text-3); }
+
+section { padding-block: 72px; display: grid; grid-template-columns: 1fr 2fr; gap: 56px; }
+section + section { border-top: 1px solid var(--line); }
+section > h2 { align-self: start; }
+.body { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.body p { color: var(--text-2); }
+.pts { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.pts li { padding-block: 18px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+.pts li:first-child { padding-top: 0; }
+.steps { list-style: none; margin: 0; padding: 0; }
+.steps li { display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding-block: 24px; border-bottom: 1px solid var(--line); }
+.steps li:first-child { padding-top: 0; }
+.steps .n { font-family: var(--font-display); font-style: italic; font-size: 2.6rem; color: var(--text-3); line-height: 1; }
+.steps p { color: var(--text-2); margin-top: 6px; }
+.cost { color: var(--text) !important; }
+.place { font-family: var(--font-display); font-size: clamp(1.3rem, 3vw, 1.7rem); line-height: 1.4; color: var(--text) !important; max-width: 30ch; }
+
+.close { background: var(--cream); border: 1px solid var(--line); padding: 56px 40px; display: flex; flex-direction: column; gap: 22px; align-items: flex-start; margin-block: 8px 40px; }
+.close p { color: var(--text-2); }
+.note { font-size: .8rem; font-style: italic; color: var(--text-3) !important; max-width: 62ch; }
+footer { border-top: 1px solid var(--line); padding-block: 24px 32px; font-size: .78rem; color: var(--text-3); line-height: 1.6; display: flex; flex-direction: column; gap: 4px; }
+footer a { color: var(--text-3); }
+
+.bar { display: none; }
+@media (max-width: 760px) {
+  .hero { grid-template-columns: 1fr; gap: 28px; padding-block: 24px 40px; }
+  .photo { order: -1; aspect-ratio: 4 / 3; object-position: center 60%; }
+  .facts { grid-template-columns: 1fr 1fr; }
+  .facts div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .facts div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  section { grid-template-columns: 1fr; gap: 24px; padding-block: 48px; }
+  .steps li { grid-template-columns: 44px 1fr; }
+  .close { padding: 36px 20px; }
+  .actions .btn { width: 100%; }
+  .bar {
+    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 5;
+    background: var(--base); border-top: 1px solid var(--line);
+    padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  }
+  .bar .btn { width: 100%; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Naturopatia e Shiatsu a Solarolo</p>
+      <h1>Prepararsi all’inverno, con <em>naturopatia e Shiatsu</em></h1>
+      <p class="lead">Un primo incontro di circa 90 minuti, con consulenza naturopatica e Shiatsu, per leggere la persona secondo la Medicina Tradizionale Cinese anche in base alla stagione. In questa tradizione l’inverno è la stagione dell’Acqua, legata al Rene, alle ossa e alle riserve di energia.</p>
+      <div class="actions">
+        <a class="btn btn-main" href="https://wa.me/393478221395?text=Ciao%20Luca%2C%20ho%20letto%20la%20pagina%20sul%20primo%20incontro%20e%20vorrei%20qualche%20informazione" target="_blank" rel="noopener" data-track="whatsapp">Chiedi informazioni su WhatsApp</a>
+        <a class="btn btn-alt" href="https://www.lucacentolani.net/contatti/?da=primo-incontro" data-track="vai-contatti">Chiedi di essere richiamato</a>
+      </div>
+      <p class="hint">Operatore Shiatsu dal 2004, socio APOS. Si riceve su prenotazione.</p>
+    </div>
+    <img class="photo" src="studio.jpg" width="1100" height="1100" alt="Lo studio: futon, cuscino nero, diapason su un vassoio di legno, lampada a luce calda e paravento shoji">
+  </div>
+
+  <section>
+    <h2>L’inverno nella tradizione cinese</h2>
+    <div class="body">
+      <ul class="pts">
+        <li><h3>Acqua e Rene</h3><p>L’inverno appartiene all’Acqua, e all’Acqua corrispondono il Rene, le ossa e le riserve profonde di energia, il Jing.</p></li>
+        <li><h3>Un tempo per conservare</h3><p>È la stagione dell’interno e del riposo. Si consumano meno energie e si lascia che le riserve si ricostituiscano per la primavera.</p></li>
+        <li><h3>Il freddo da cui proteggersi</h3><p>Il Rene teme il freddo. Per questo in inverno si tengono al caldo la parte bassa della schiena e i piedi, e si sceglie un’alimentazione calda e cotta.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="incontro">
+    <h2>Il primo incontro</h2>
+    <div class="body">
+      <p>Prima dell’appuntamento c’è una breve telefonata. L’incontro dura circa 90 minuti e ha tre momenti.</p>
+      <ol class="steps">
+        <li><span class="n">1</span><div><h3>Il colloquio</h3><p>Si parte da ciò che ha portato la persona in studio. Poi ci si allarga al sonno, alla parte emotiva e allo stile di vita. Serve a leggere il quadro nel suo insieme secondo la Medicina Tradizionale Cinese.</p></div></li>
+        <li><span class="n">2</span><div><h3>Il trattamento Shiatsu</h3><p>Si fa a terra, su un futon, restando vestiti. Si agisce lungo i meridiani con il peso del corpo e non con la forza dei muscoli, seguendo ciò che le mani incontrano. Nella tradizione orientale serve a favorire la circolazione del Qi e a riequilibrare le zone troppo piene o troppo vuote.</p></div></li>
+        <li><span class="n">3</span><div><h3>Le indicazioni</h3><p>A seconda di ciò che emerge, possono essere indicati fiori di Bach o fiori australiani, integratori a base di erbe e cambiamenti da portare avanti, letti dal punto di vista energetico.</p></div></li>
+      </ol>
+      <p class="cost">Costi e modalità si comunicano al primo contatto, a voce o per messaggio.</p>
+      <div class="actions">
+        <a class="btn btn-main" href="https://wa.me/393478221395?text=Ciao%20Luca%2C%20ho%20letto%20la%20pagina%20sul%20primo%20incontro%20e%20vorrei%20qualche%20informazione" target="_blank" rel="noopener" data-track="whatsapp">Chiedi informazioni su WhatsApp</a>
+        <a class="btn btn-alt" href="https://www.lucacentolani.net/contatti/?da=primo-incontro" data-track="vai-contatti">Chiedi di essere richiamato</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dove</h2>
+    <div class="body">
+      <p class="place">Solarolo (RA), a 10-20 minuti da Faenza, Imola, Lugo e Castel Bolognese.</p>
+      <p>Si riceve solo su prenotazione.</p>
+    </div>
+  </section>
+
+  <div class="close" id="contatto">
+    <h2>Per saperne di più, basta un messaggio</h2>
+    <p>Basta un messaggio su WhatsApp, oppure il numero lasciato dal modulo. Poi arriva la telefonata.</p>
+    <div class="actions">
+      <a class="btn btn-main" href="https://wa.me/393478221395?text=Ciao%20Luca%2C%20ho%20letto%20la%20pagina%20sul%20primo%20incontro%20e%20vorrei%20qualche%20informazione" target="_blank" rel="noopener" data-track="whatsapp">Chiedi informazioni su WhatsApp</a>
+      <a class="btn btn-alt" href="https://www.lucacentolani.net/contatti/?da=primo-incontro" data-track="vai-contatti">Chiedi di essere richiamato</a>
+    </div>
+    <p class="note">Le informazioni di questa pagina hanno scopo informativo. Shiatsu e consulenza naturopatica non sostituiscono il parere del medico, né diagnosi o terapie mediche.</p>
+  </div>
+
+</div>
+
+<div class="bar">
+  <a class="btn btn-main" href="https://wa.me/393478221395?text=Ciao%20Luca%2C%20ho%20letto%20la%20pagina%20sul%20primo%20incontro%20e%20vorrei%20qualche%20informazione" target="_blank" rel="noopener" data-track="whatsapp-barra">Chiedi informazioni su WhatsApp</a>
+</div>
+</body>
+</html>
